@@ -2,7 +2,7 @@ Deploy the app (Production)
 ====
 
 # 本番環境構成
-* Google App Engine Flexible Environment
+* Google App Engine Standard Environment Python3.7
 * Google Cloud SQL for PostgreSQL
 
 
