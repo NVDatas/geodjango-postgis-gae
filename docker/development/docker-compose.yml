@@ -1,0 +1,11 @@
+version: '3'
+services:
+  postgresql:
+    build: ./postgis
+    image: mdillon/postgis:9.6-2.3-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=app
+      - POSTGRES_PASSWORD=Jt67MpogpwYyayiJ9jkJub99jemxaykH
+      - POSTGRES_DB=app-development

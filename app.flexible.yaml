@@ -1,0 +1,22 @@
+# see: https://cloud.google.com/appengine/docs/flexible/custom-runtimes/configuring-your-app-with-app-yaml
+runtime: custom
+env: flex
+entrypoint: bash -c "sh ./config/startup.sh && gunicorn --chdir ./app/ -b :$PORT wsgi"
+
+service: default
+
+# f1-micro
+resources:
+  cpu: .5
+  memory_gb: 0.5
+  disk_size_gb: 10
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 1
+  cool_down_period_sec: 60
+  cpu_utilization:
+    target_utilization: .7
+
+beta_settings:
+    cloud_sql_instances: geodjango-postgis-gae-001:asia-northeast1:app-main

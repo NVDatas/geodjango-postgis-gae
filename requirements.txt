@@ -1,0 +1,22 @@
+# staging/production packages
+
+# Django
+django==2.1.2
+
+django-environ==0.4.5
+
+## djangorestframework
+djangorestframework==3.8.2
+djangorestframework-jsonp==1.0.2
+djangorestframework-gis==0.13.0
+django-filter==2.0.0
+drf-yasg==1.10.2
+
+pytz==2018.5
+
+# production
+wheel==0.31.1
+psycopg2-binary==2.7.5
+gunicorn==19.9.0
+requests[security]==2.19.1
+google-cloud-runtimeconfig==0.28.1
